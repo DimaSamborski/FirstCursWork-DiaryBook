@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.OleDb; // connect to ole db
+using System.Data.SqlClient; // ADO connect to sql server 
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,26 @@ namespace AtP_Curs.App_data
     class DBWork
     {
         // method check users in table
-        public bool Check()
+        public bool UCheck()
         {
-            // to do: check people in database;
+            string conStr = @"Data Source=(local);Initial Catalog =user; Integrate Security=true";
+
+            SqlConnection connection = new SqlConnection(conStr);
+            
+            try
+            {
+                connection.Open();
+                Console.WriteLine(connection.State);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                connection.Close();
+                Console.WriteLine(connection.State);
+            }
 
             return false;
         }

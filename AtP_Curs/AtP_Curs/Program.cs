@@ -14,9 +14,17 @@ namespace AtP_Curs
         [STAThread]
         static void Main()
         {
+            App_data.DBWork db = new App_data.DBWork();
+
+            db.UCheck();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+           
+
+
         }
     }
 }
