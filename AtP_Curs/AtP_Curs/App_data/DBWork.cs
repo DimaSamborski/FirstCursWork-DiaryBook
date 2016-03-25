@@ -14,9 +14,7 @@ namespace AtP_Curs.App_data
         // method check users in table
         public bool UCheck()
         {
-            string conStr = @"Data Source=(local);Initial Catalog =user; Integrate Security=true";
-
-            SqlConnection connection = new SqlConnection(conStr);
+            SqlConnection connection = new SqlConnection(@"Data Source=(local);Initial Catalog =user; Integrate Security=true");
             
             try
             {
