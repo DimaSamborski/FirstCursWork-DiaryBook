@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AtP_Curs
 {
-    public partial class Verification : Form
+    public partial class FSearchDatabase : Form
     {
-        public Verification()
+        public FSearchDatabase()
         {
             InitializeComponent();
-        }
-
-        private void Verification_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

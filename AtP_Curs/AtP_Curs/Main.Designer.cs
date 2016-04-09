@@ -34,6 +34,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BSearch = new System.Windows.Forms.Button();
             this.BStatistic = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -44,7 +45,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.BSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,6 +108,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Main";
+            // 
+            // BSearch
+            // 
+            this.BSearch.Location = new System.Drawing.Point(302, 17);
+            this.BSearch.Name = "BSearch";
+            this.BSearch.Size = new System.Drawing.Size(75, 23);
+            this.BSearch.TabIndex = 4;
+            this.BSearch.Text = "Search";
+            this.BSearch.UseVisualStyleBackColor = true;
             // 
             // BStatistic
             // 
@@ -196,15 +205,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Delete";
             // 
-            // BSearch
-            // 
-            this.BSearch.Location = new System.Drawing.Point(302, 17);
-            this.BSearch.Name = "BSearch";
-            this.BSearch.Size = new System.Drawing.Size(75, 23);
-            this.BSearch.TabIndex = 4;
-            this.BSearch.Text = "Search";
-            this.BSearch.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +216,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Main";
             this.Text = "VNTU Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

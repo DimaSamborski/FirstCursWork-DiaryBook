@@ -88,6 +88,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Verification";
             this.Text = "Verification";
+            this.Load += new System.EventHandler(this.Verification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

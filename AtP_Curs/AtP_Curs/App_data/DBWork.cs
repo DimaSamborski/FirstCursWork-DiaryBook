@@ -24,63 +24,6 @@ namespace AtP_Curs.App_data
         {
             Connect();
         }
-        public void InsertfortUser(string name, string Instituts, int mass)
-        {
-            try
-            {
-                command.CommandText = "INSERT INTO User (Name,Instituts,Mass) VALUES("+name+", "+Instituts+", "+mass+")";
-                command.CommandType = CommandType.Text;
-                connection.Open();
-
-
-                command.ExecuteNonQuery();
-            }
-            catch
-            {
-                throw;
-            }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
-        }
-
-        public void Delete(string tabl, string id)
-        {
-
-            command.CommandText = ;
-            command.CommandType = CommandType.Text;
-            connection.Open();
-
-            command.ExecuteNonQuery();
-
-            if (connection != null)
-                {
-                connection.Close();
-                }
-        }
-
-        public void Update()
-        {
-
-                command.CommandText = "UPDATE TABLE {0} SET {1}";
-                command.CommandType = CommandType.Text;
-                connection.Open();
-
-                command.ExecuteNonQuery();
-
-
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-        }
-        public static void Select()
-        {
-
-        }
+        
     }
 }
