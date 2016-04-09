@@ -11,20 +11,12 @@ namespace AtP_Curs
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
-        [STAThread]
+        [STAThread] // 
         static void Main()
         {
-            App_data.DBWork db = new App_data.DBWork();
-
-            db.UCheck();
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-           
-
-
+            Application.Run(new Verification());
         }
     }
 }

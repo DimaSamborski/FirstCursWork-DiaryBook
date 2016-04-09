@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace AtP_Curs
 {
-    public partial class Form1 : Form
+    public partial class Verification : Form
     {
-        public Form1()
+        public Verification()
         {
             InitializeComponent();
         }
-
-        
     }
 }
