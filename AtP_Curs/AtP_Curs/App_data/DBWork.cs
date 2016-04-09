@@ -24,6 +24,38 @@ namespace AtP_Curs.App_data
         {
             Connect();
         }
-        
+
+        public bool UserCheck(string name, string password)
+        {
+            try
+            {
+                command.CommandText = "";
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+
+            }
+            bool ckUser = false;
+            bool ckPassword = false;
+
+
+
+            // search user
+
+            if ()
+            {
+
+            }
+
+            return false;
+        }
     }
 }

@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.bEnter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtLogin.Location = new System.Drawing.Point(12, 40);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(129, 20);
+            this.txtLogin.TabIndex = 0;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtPassword.Location = new System.Drawing.Point(13, 103);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(128, 20);
+            this.txtPassword.TabIndex = 1;
             // 
             // bEnter
             // 
@@ -57,6 +57,7 @@
             this.bEnter.TabIndex = 2;
             this.bEnter.Text = "Enter";
             this.bEnter.UseVisualStyleBackColor = true;
+            this.bEnter.Click += new System.EventHandler(this.bEnter_Click);
             // 
             // label1
             // 
@@ -84,8 +85,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bEnter);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtLogin);
             this.Name = "Verification";
             this.Text = "Verification";
             this.Load += new System.EventHandler(this.Verification_Load);
@@ -96,8 +97,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button bEnter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

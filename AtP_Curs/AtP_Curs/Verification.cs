@@ -21,5 +21,34 @@ namespace AtP_Curs
         {
 
         }
+
+        private void bEnter_Click(object sender, EventArgs e)
+        {
+            string name, password;
+            name = txtLogin.Text;
+            password = txtPassword.Text;
+
+            if (CheckUser())
+            {
+                Application.Run(new Main());
+            }
+            else
+            {
+                bEnter.Text = "Error";
+            }
+        }
+
+        private bool CheckUser()
+        {
+            App_data.DBWork db = new App_data.DBWork();
+            if (db.)
+            {
+
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

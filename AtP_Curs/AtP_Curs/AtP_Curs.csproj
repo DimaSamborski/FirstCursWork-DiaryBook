@@ -61,9 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_data\Check.cs" />
     <Compile Include="App_data\DBWork.cs" />
     <Compile Include="App_data\Encryption.cs" />
+    <Compile Include="FSearchDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSearchDatabase.Designer.cs">
+      <DependentUpon>FSearchDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +83,9 @@
     <Compile Include="Verification.Designer.cs">
       <DependentUpon>Verification.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FSearchDatabase.resx">
+      <DependentUpon>FSearchDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
