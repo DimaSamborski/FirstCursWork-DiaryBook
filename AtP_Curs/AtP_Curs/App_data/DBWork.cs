@@ -29,7 +29,12 @@ namespace AtP_Curs.App_data
         {
             try
             {
-                command.CommandText = "";
+                string sql = "SELECT "+name+" FROM [Users]";
+                OleDbCommand cmd = new OleDbCommand(sql, connection);
+                connection.Open();
+                cmd.CommandType = CommandType.Text;
+                connection.Close();
+
             }
             catch
             {
