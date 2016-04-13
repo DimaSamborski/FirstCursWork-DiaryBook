@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace AtP_Curs
 {
@@ -28,27 +29,21 @@ namespace AtP_Curs
             name = txtLogin.Text;
             password = txtPassword.Text;
 
-            if (CheckUser())
+            App_data.Encryption crypt = new App_data.Encryption();
+            App_data.DBWork b = new App_data.DBWork();
+
+            password = crypt.EncryptString(password, 14);
+
+            if(b.UserCheck(name, password))
             {
-                Application.Run(new Main());
+                DialogResult = DialogResult.OK;
             }
             else
             {
-                bEnter.Text = "Error";
+                MessageBox.Show("Неправильний логін або пароль");
             }
         }
 
-        private bool CheckUser()
-        {
-            App_data.DBWork db = new App_data.DBWork();
-            if (db.)
-            {
-
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
     }
 }

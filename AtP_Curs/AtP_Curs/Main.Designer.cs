@@ -35,7 +35,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BSearch = new System.Windows.Forms.Button();
-            this.BStatistic = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -45,6 +44,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -98,13 +98,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.BSearch);
-            this.groupBox2.Controls.Add(this.BStatistic);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.comboBox5);
             this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Location = new System.Drawing.Point(326, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(477, 407);
+            this.groupBox2.Size = new System.Drawing.Size(470, 335);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Main";
@@ -118,21 +117,12 @@
             this.BSearch.Text = "Search";
             this.BSearch.UseVisualStyleBackColor = true;
             // 
-            // BStatistic
-            // 
-            this.BStatistic.Location = new System.Drawing.Point(18, 349);
-            this.BStatistic.Name = "BStatistic";
-            this.BStatistic.Size = new System.Drawing.Size(109, 39);
-            this.BStatistic.TabIndex = 3;
-            this.BStatistic.Text = "Statistic";
-            this.BStatistic.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(454, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(454, 268);
             this.dataGridView1.TabIndex = 2;
             // 
             // comboBox5
@@ -205,11 +195,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Delete";
             // 
+            // btnAddUser
+            // 
+            this.btnAddUser.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAddUser.Location = new System.Drawing.Point(326, 362);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(91, 39);
+            this.btnAddUser.TabIndex = 4;
+            this.btnAddUser.Text = "Add User";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 425);
+            this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -244,7 +246,7 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BStatistic;
         private System.Windows.Forms.Button BSearch;
+        private System.Windows.Forms.Button btnAddUser;
     }
 }

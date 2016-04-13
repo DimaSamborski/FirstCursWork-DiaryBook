@@ -18,24 +18,22 @@ namespace AtP_Curs
             InitializeComponent();
         }
 
+       
+
         private void Main_Load(object sender, EventArgs e)
         {
-
+            Verification fVerification = new Verification();
+            if (fVerification.ShowDialog() != DialogResult.OK) Application.Exit();
         }
 
-        private bool CheckSettings()
+        private void button2_Click(object sender, EventArgs e)
         {
-            string settings = @"settings.txt";
-            if (File.Exists(settings))
-            {
-                string[] mass = File.ReadAllLines(settings);
-            }
-            else
-            {
-                Application.Run(new FSearchDatabase());
-            }
+        }
 
-            return false;
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            FSearchDatabase formSearch = new FSearchDatabase();
+            Show(formSearch);
         }
     }
 }
