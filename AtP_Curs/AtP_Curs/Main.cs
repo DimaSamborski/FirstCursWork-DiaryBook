@@ -24,6 +24,13 @@ namespace AtP_Curs
         {
             Verification fVerification = new Verification();
             if (fVerification.ShowDialog() != DialogResult.OK) Application.Exit();
+
+
+        }
+
+        private void FormAdd()
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,8 +39,7 @@ namespace AtP_Curs
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            FSearchDatabase formSearch = new FSearchDatabase();
-            Show(formSearch);
+           
         }
     }
 }
