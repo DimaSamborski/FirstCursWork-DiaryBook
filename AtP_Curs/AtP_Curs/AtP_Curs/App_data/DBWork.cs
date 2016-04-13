@@ -38,5 +38,30 @@ namespace AtP_Curs.App_data
             return scores;
         }
 
+        public List<string> ComboBoxFacults()
+        {
+            try
+            {
+                command.CommandText = "SELECT [names] FROM [Instituts]";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                List<string> postlist;
+                
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    reader.
+                    p.Fnam = reader["Post"].ToString();
+                    postlist.Add(p);
+                }
+                return postlist;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }
