@@ -9,7 +9,7 @@ namespace AtP_Curs.App_data
     // encryption data
     class Encryption
     {
-        public static string EncryptString(string start, int key)
+        public string EncryptString(string start, int key)
         {
             byte[] arr = Encoding.Unicode.GetBytes(start);
             string result = Encrypt(arr, key);

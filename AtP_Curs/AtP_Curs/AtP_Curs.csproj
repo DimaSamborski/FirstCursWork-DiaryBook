@@ -63,6 +63,12 @@
   <ItemGroup>
     <Compile Include="App_data\DBWork.cs" />
     <Compile Include="App_data\Encryption.cs" />
+    <Compile Include="FAddnewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddnewUser.Designer.cs">
+      <DependentUpon>FAddnewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSearchDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Verification.Designer.cs">
       <DependentUpon>Verification.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FAddnewUser.resx">
+      <DependentUpon>FAddnewUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSearchDatabase.resx">
       <DependentUpon>FSearchDatabase.cs</DependentUpon>
     </EmbeddedResource>

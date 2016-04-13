@@ -18,24 +18,46 @@ namespace AtP_Curs
             InitializeComponent();
         }
 
+       
+
         private void Main_Load(object sender, EventArgs e)
         {
+            Verification fVerification = new Verification();
+            if (fVerification.ShowDialog() != DialogResult.OK) Application.Exit();
+
 
         }
-
-        private bool CheckSettings()
+        App_data.DBWork db = new App_data.DBWork();
+        private void FormAdd()
         {
-            string settings = @"settings.txt";
-            if (File.Exists(settings))
-            {
-                string[] mass = File.ReadAllLines(settings);
-            }
-            else
-            {
-                Application.Run(new FSearchDatabase());
-            }
+            cmbAddFacults.DataSource = db.InsertFacultets();
+            cmbRedactingFacults.DataSource = db.InsertFacultets();
+            cmbViewFacults.DataSource = db.InsertFacultets();
+            cmbDeleteFacukltets.DataSource = db.InsertFacultets();
+        }
 
-            return false;
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmbRedactingFacults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbRedactingGroup.DataSource = db.SelectGroup(cmbRedactingFacults.Text);
+        }
+
+        private void cmbDeleteFacukltets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmdDeleteGroup.DataSource = db.SelectGroup(cmbDeleteFacukltets.Text);
+        }
+
+        private void cmbViewFacults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbViewGroup.DataSource = db.SelectGroup(cmbViewFacults.Text);
         }
     }
 }

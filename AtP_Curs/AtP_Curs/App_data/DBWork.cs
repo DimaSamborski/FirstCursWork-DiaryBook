@@ -29,11 +29,18 @@ namespace AtP_Curs.App_data
         {
             try
             {
-                command.CommandText = "";
-            }
-            catch
-            {
+                command.CommandText = "SELECT * FROM [User] WHERE User_name = '" + name + "' AND User_password = '" + password + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
 
+                OleDbDataReader reader = command.ExecuteReader();
+                if (reader.Read()) return true;
+                else return false;
+
+            }
+            catch(Exception)
+            {
+                throw;
             }
             finally
             {
@@ -41,21 +48,99 @@ namespace AtP_Curs.App_data
                 {
                     connection.Close();
                 }
-
             }
-            bool ckUser = false;
-            bool ckPassword = false;
-
-
-
-            // search user
-
-            if ()
-            {
-
-            }
-
-            return false;
         }
+
+        public void InsertUser(string name, string password)
+        {
+            try
+            {
+                command.Parameters.AddWithValue("@login", name);
+                command.Parameters.AddWithValue("@pass", password);
+                command.CommandText = "INSERT INTO [User] ([User_name], [User_password]) VALUES(@login, @pass)";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public List<string> SelectGroup(string facults)
+        {
+            try
+            {
+                command.CommandText = "SELECT * FROM [Instituts] WHERE GFacults='" + facults + "'";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                OleDbDataReader reader = command.ExecuteReader();
+                List<string> fillCombobox = new List<string>();
+                string steck = null;
+
+                while (reader.Read())
+                {
+                    steck = reader["names"].ToString();
+                    fillCombobox.Add(steck);
+                }
+                return fillCombobox;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public List<string> InsertFacultets()
+        {
+            try
+            {
+                command.CommandText = "SELECT * FROM [Instituts]";
+                command.CommandType = CommandType.Text;
+                connection.Open();
+
+                OleDbDataReader reader = command.ExecuteReader();
+                List<string> fillCombobox = new List<string>();
+                string steck = null;
+
+                while (reader.Read())
+                {
+                    steck = reader["names"].ToString();
+                    fillCombobox.Add(steck);
+                }
+                return fillCombobox;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
     }
 }
