@@ -27,10 +27,13 @@ namespace AtP_Curs
 
 
         }
-
+        App_data.DBWork db = new App_data.DBWork();
         private void FormAdd()
         {
-
+            cmbAddFacults.DataSource = db.InsertFacultets();
+            cmbRedactingFacults.DataSource = db.InsertFacultets();
+            cmbViewFacults.DataSource = db.InsertFacultets();
+            cmbDeleteFacukltets.DataSource = db.InsertFacultets();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +43,21 @@ namespace AtP_Curs
         private void btnAddUser_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void cmbRedactingFacults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbRedactingGroup.DataSource = db.SelectGroup(cmbRedactingFacults.Text);
+        }
+
+        private void cmbDeleteFacukltets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmdDeleteGroup.DataSource = db.SelectGroup(cmbDeleteFacukltets.Text);
+        }
+
+        private void cmbViewFacults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbViewGroup.DataSource = db.SelectGroup(cmbViewFacults.Text);
         }
     }
 }

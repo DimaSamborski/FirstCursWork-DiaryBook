@@ -44,10 +44,10 @@
             this.cmbRedactingGroup = new System.Windows.Forms.ComboBox();
             this.cmbRedactingFacults = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.cmbDeleteFacukltets = new System.Windows.Forms.ComboBox();
-            this.cmdDeleteGroup = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.cmdDeleteGroup = new System.Windows.Forms.ComboBox();
+            this.cmbDeleteFacukltets = new System.Windows.Forms.ComboBox();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,6 +93,7 @@
             // 
             // cmbAddFacults
             // 
+            this.cmbAddFacults.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAddFacults.FormattingEnabled = true;
             this.cmbAddFacults.Location = new System.Drawing.Point(7, 41);
             this.cmbAddFacults.Name = "cmbAddFacults";
@@ -131,6 +132,7 @@
             // 
             // cmbViewGroup
             // 
+            this.cmbViewGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbViewGroup.FormattingEnabled = true;
             this.cmbViewGroup.Location = new System.Drawing.Point(154, 20);
             this.cmbViewGroup.Name = "cmbViewGroup";
@@ -139,11 +141,13 @@
             // 
             // cmbViewFacults
             // 
+            this.cmbViewFacults.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbViewFacults.FormattingEnabled = true;
             this.cmbViewFacults.Location = new System.Drawing.Point(7, 20);
             this.cmbViewFacults.Name = "cmbViewFacults";
             this.cmbViewFacults.Size = new System.Drawing.Size(121, 21);
             this.cmbViewFacults.TabIndex = 0;
+            this.cmbViewFacults.SelectedIndexChanged += new System.EventHandler(this.cmbViewFacults_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -176,6 +180,7 @@
             // 
             // cmbRedactingGroup
             // 
+            this.cmbRedactingGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRedactingGroup.FormattingEnabled = true;
             this.cmbRedactingGroup.Location = new System.Drawing.Point(135, 37);
             this.cmbRedactingGroup.Name = "cmbRedactingGroup";
@@ -184,11 +189,13 @@
             // 
             // cmbRedactingFacults
             // 
+            this.cmbRedactingFacults.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRedactingFacults.FormattingEnabled = true;
             this.cmbRedactingFacults.Location = new System.Drawing.Point(7, 38);
             this.cmbRedactingFacults.Name = "cmbRedactingFacults";
             this.cmbRedactingFacults.Size = new System.Drawing.Size(121, 21);
             this.cmbRedactingFacults.TabIndex = 0;
+            this.cmbRedactingFacults.SelectedIndexChanged += new System.EventHandler(this.cmbRedactingFacults_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -202,6 +209,34 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Delete";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(7, 79);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(97, 32);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // cmdDeleteGroup
+            // 
+            this.cmdDeleteGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmdDeleteGroup.FormattingEnabled = true;
+            this.cmdDeleteGroup.Location = new System.Drawing.Point(147, 19);
+            this.cmdDeleteGroup.Name = "cmdDeleteGroup";
+            this.cmdDeleteGroup.Size = new System.Drawing.Size(121, 21);
+            this.cmdDeleteGroup.TabIndex = 2;
+            // 
+            // cmbDeleteFacukltets
+            // 
+            this.cmbDeleteFacukltets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDeleteFacukltets.FormattingEnabled = true;
+            this.cmbDeleteFacukltets.Location = new System.Drawing.Point(7, 19);
+            this.cmbDeleteFacukltets.Name = "cmbDeleteFacukltets";
+            this.cmbDeleteFacukltets.Size = new System.Drawing.Size(121, 21);
+            this.cmbDeleteFacukltets.TabIndex = 1;
+            this.cmbDeleteFacukltets.SelectedIndexChanged += new System.EventHandler(this.cmbDeleteFacukltets_SelectedIndexChanged);
+            // 
             // btnAddUser
             // 
             this.btnAddUser.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -212,31 +247,6 @@
             this.btnAddUser.Text = "Add User";
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
-            // cmbDeleteFacukltets
-            // 
-            this.cmbDeleteFacukltets.FormattingEnabled = true;
-            this.cmbDeleteFacukltets.Location = new System.Drawing.Point(7, 19);
-            this.cmbDeleteFacukltets.Name = "cmbDeleteFacukltets";
-            this.cmbDeleteFacukltets.Size = new System.Drawing.Size(121, 21);
-            this.cmbDeleteFacukltets.TabIndex = 1;
-            // 
-            // cmdDeleteGroup
-            // 
-            this.cmdDeleteGroup.FormattingEnabled = true;
-            this.cmdDeleteGroup.Location = new System.Drawing.Point(147, 19);
-            this.cmdDeleteGroup.Name = "cmdDeleteGroup";
-            this.cmdDeleteGroup.Size = new System.Drawing.Size(121, 21);
-            this.cmdDeleteGroup.TabIndex = 2;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(7, 79);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 32);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
