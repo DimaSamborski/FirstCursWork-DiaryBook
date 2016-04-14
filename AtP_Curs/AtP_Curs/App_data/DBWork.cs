@@ -141,6 +141,5 @@ namespace AtP_Curs.App_data
                 }
             }
         }
-
     }
 }

@@ -69,12 +69,6 @@
     <Compile Include="FAddnewUser.Designer.cs">
       <DependentUpon>FAddnewUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSearchDatabase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSearchDatabase.Designer.cs">
-      <DependentUpon>FSearchDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +85,6 @@
     </Compile>
     <EmbeddedResource Include="FAddnewUser.resx">
       <DependentUpon>FAddnewUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSearchDatabase.resx">
-      <DependentUpon>FSearchDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -148,7 +148,6 @@
             this.cmbViewFacults.Name = "cmbViewFacults";
             this.cmbViewFacults.Size = new System.Drawing.Size(121, 21);
             this.cmbViewFacults.TabIndex = 0;
-            this.cmbViewFacults.SelectedIndexChanged += new System.EventHandler(this.cmbViewFacults_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -196,7 +195,6 @@
             this.cmbRedactingFacults.Name = "cmbRedactingFacults";
             this.cmbRedactingFacults.Size = new System.Drawing.Size(121, 21);
             this.cmbRedactingFacults.TabIndex = 0;
-            this.cmbRedactingFacults.SelectedIndexChanged += new System.EventHandler(this.cmbRedactingFacults_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -236,7 +234,6 @@
             this.cmbDeleteFacukltets.Name = "cmbDeleteFacukltets";
             this.cmbDeleteFacukltets.Size = new System.Drawing.Size(121, 21);
             this.cmbDeleteFacukltets.TabIndex = 1;
-            this.cmbDeleteFacukltets.SelectedIndexChanged += new System.EventHandler(this.cmbDeleteFacukltets_SelectedIndexChanged);
             // 
             // btnAddUser
             // 

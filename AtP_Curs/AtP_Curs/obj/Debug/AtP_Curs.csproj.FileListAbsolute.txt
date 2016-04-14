@@ -25,3 +25,7 @@ C:\Users\Dima\Desktop\AtP_Curs\AtP_Curs\bin\Debug\App_data\data\user_log.ldf
 C:\Users\Dima\Desktop\AtP_Curs\AtP_Curs\bin\Debug\AtP_Curs.exe
 C:\Users\Dima\Desktop\AtP_Curs\AtP_Curs\bin\Debug\AtP_Curs.pdb
 C:\Users\Dima\Documents\GitHub\first_curs_normal\AtP_Curs\AtP_Curs\obj\Debug\AtP_Curs.FAddnewUser.resources
+C:\Users\Dima Shmundiak\Documents\GitHub\first_curs-try_number_2\AtP_Curs\AtP_Curs\bin\Debug\AtP_Curs.exe.config
+C:\Users\Dima Shmundiak\Documents\GitHub\first_curs-try_number_2\AtP_Curs\AtP_Curs\obj\Debug\AtP_Curs.exe
+C:\Users\Dima Shmundiak\Documents\GitHub\first_curs-try_number_2\AtP_Curs\AtP_Curs\obj\Debug\AtP_Curs.pdb
+C:\Users\Dima Shmundiak\Documents\GitHub\first_curs-try_number_2\AtP_Curs\AtP_Curs\obj\Debug\AtP_Curs.csprojResolveAssemblyReference.cache
