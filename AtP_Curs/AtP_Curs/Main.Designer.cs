@@ -99,6 +99,7 @@
             this.cmbAddFacults.Name = "cmbAddFacults";
             this.cmbAddFacults.Size = new System.Drawing.Size(121, 21);
             this.cmbAddFacults.TabIndex = 0;
+            this.cmbAddFacults.SelectedIndexChanged += new System.EventHandler(this.cmbAddFacults_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -168,7 +169,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 32);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Rgroup";
+            this.button1.Text = "Redacting group";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // txtRedactingCount

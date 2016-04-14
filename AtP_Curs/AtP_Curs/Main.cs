@@ -22,8 +22,8 @@ namespace AtP_Curs
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Verification fVerification = new Verification();
-            if (fVerification.ShowDialog() != DialogResult.OK) Application.Exit();
+           /* Verification fVerification = new Verification();
+            if (fVerification.ShowDialog() != DialogResult.OK) Application.Exit();*/
 
 
         }
@@ -42,7 +42,8 @@ namespace AtP_Curs
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-           
+            FAddnewUser fAddNewUser = new FAddnewUser;
+            fAddNewUser.ShowDialog();
         }
 
         private void cmbRedactingFacults_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,6 +59,11 @@ namespace AtP_Curs
         private void cmbViewFacults_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbViewGroup.DataSource = db.SelectGroup(cmbViewFacults.Text);
+        }
+
+        private void cmbAddFacults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

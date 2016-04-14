@@ -75,7 +75,7 @@ namespace AtP_Curs.App_data
                 }
             }
         }
-
+        // write all group where Facultets name == facults
         public List<string> SelectGroup(string facults)
         {
             try
@@ -108,7 +108,7 @@ namespace AtP_Curs.App_data
                 }
             }
         }
-
+        // write Facultets in Check box
         public List<string> InsertFacultets()
         {
             try

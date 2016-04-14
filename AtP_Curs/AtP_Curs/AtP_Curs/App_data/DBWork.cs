@@ -51,7 +51,7 @@ namespace AtP_Curs.App_data
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    reader.
+                    reader[]
                     p.Fnam = reader["Post"].ToString();
                     postlist.Add(p);
                 }
